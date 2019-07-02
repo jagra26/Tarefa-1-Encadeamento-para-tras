@@ -1,0 +1,13 @@
+package com.company;
+
+public class Regra {
+    int EA;
+    int EB;
+    int R;
+
+    public Regra(int eA, int eB, int r) {
+        EA = eA;
+        EB = eB;
+        R = r;
+    }
+}
