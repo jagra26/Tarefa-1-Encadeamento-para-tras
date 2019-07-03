@@ -36,20 +36,21 @@ public class Main {
     public static boolean engenho(ArrayList<Integer> exp, ArrayList<Regra> reg, int id) {
         Integer truev = 1;
         Integer falsev = 1;
-        while (true) {
+        Integer nov = 0;
+        while(true){
+        for (int i = 0; i < reg.size(); i++) {
+            //if (!exp.get(reg.get(i).EA).equals(nov) && !exp.get(reg.get(i).EB).equals(nov)
+              //      && exp.get(reg.get(i).R).equals(nov)){
+                exp.set(reg.get(i).R, (reg.get(i).EA*reg.get(i).EB));
+            //}
 
+        }
             if (exp.get(id).equals(truev)) {
                 return true;
             }
             if (exp.get(id).equals(falsev)) {
                 return false;
-            } else {
-                for (int i = 0; i < reg.size(); i++) {
-                    if (reg.get(i).EA != 0 && reg.get(i).EB !=0){
-                        exp.set(reg.get(i).R, (reg.get(i).EA*reg.get(i).EB));
-                    }
-                }
             }
         }
-        }
+    }
 }
